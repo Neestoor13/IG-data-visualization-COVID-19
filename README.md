@@ -23,7 +23,7 @@ Este proyecto consiste en una visualización de datos sobre contagios y muertes 
 
 ### Datos cargados
 
-Hacemos uso de datos de la COVID-19 actualizados semanalmente por la [OMS]((https://data.who.int/dashboards/covid19/data)). Principalmente, hacemos uso de los datos referentes a declaración de nuevos casos y muertes, así como también del total acumulado.
+Hacemos uso de datos de la COVID-19 actualizados semanalmente por la [OMS](https://data.who.int/dashboards/covid19/data). Principalmente, hacemos uso de los datos referentes a declaración de nuevos casos y muertes, así como también del total acumulado.
 
 Haciendo uso de ambos datos, podemos observar que países han sido más azotados por los contagios según el total acumulado, así como ver la propagación del virus con los casos y muertes declaradas semanalmente.
 
@@ -32,16 +32,25 @@ Haciendo uso de ambos datos, podemos observar que países han sido más azotados
 A la hora de visualizar los datos, hemos decidido representar los casos/muertes como "bins" de histograma, creciendo y decreciendo segúnel número de nuevos casos/muertes.
 
 Para ello, hacemos uso de las siguientes funciones:
-- **latLonToPlane**/**latLonToSphere**: utilizada para transformas las coordenadas geográficas de los países a coordenadas de plano o esfera respectivamente.
+- **latLonToPlane**/**latLonToSphere**: utilizada para transformar las coordenadas geográficas de los países a coordenadas de plano o esfera respectivamente.
 - **createMarkers**: para la creación inicial de la posicion de los histogramas vacíos (inicialmente invisibles).
-- **updateMarkers**: encargado de actualizar los datos para la correcta visualización de los datos en los bins de histograma.
+- **updateMarkers**: encargado de actualizar los datos para la correcta visualización de los datos en los bins de histograma. Según los datos aumenten o decrecen, esta evolución se ve reflejada en el tamaño del histograma.
 
 ### Vistas
 
 Para la visualización de los datos, puede hacerse uso de una de las dos vistas implementadas:
 
 - Vista 2D: consiste en un mapa del mundo (plano) en el que se representan los datos.
+
+![Botón para activar la vista 2D](images/Boton_vista_2D.png)
+
+![Simulación de la vista 2D](images/Vista_2D.gif)
+
 - Vista 3D: representamos el planeta Tierra en 3D para tener una visualización extraterrestre.
+
+![Botón para activar la vista 3D](images/Botón_vista_3D.png)
+
+![Simulación de la vista 3D](images/Vista_3D.gif)
 
 #### Botones
 
@@ -49,9 +58,13 @@ Para la visualización de los datos, puede hacerse uso de una de las dos vistas 
 
 Se han implementado diferentes botones para alternar entres distintas visualizaciones de datos, haciendo posible de esta forma aislar casos y muertes semanales de sus equivalentes acumulados.
 
+![Botones de seleeción de métrica](images/Botones_metricas.png)
+
 ##### Flujo de la representación
 
 De igual manera, para poder controlar aún más el flujo de la representación de los datos, se han implementado tres botones que permiten reiniciar, pausar y avanzar de semana.
+
+![Botones de control para el flujo de datos](images/Botones_flujo.png)
 
 - 🔄 Reiniciar: reinicia la representación al estado inicial.
 
@@ -62,6 +75,8 @@ De igual manera, para poder controlar aún más el flujo de la representación d
 ### Ranking
 
 Cabe destacar además que para enriquecer el proceso de visualización, se ha añadido una clasificación de los 10 países que más nuevos casos/muertes o casos/muertes acumuladas llevan hasta la fecha indicada.
+
+![Botones de seleeción de métrica](images/Ranking_con_boton.png)
 
 ## Implementaciones adicionales
 
