@@ -86,6 +86,8 @@ Adicionalmente, se han añadido funciones complementarias para complementar la i
 - **highlightActiveMetric**: se encarga de resaltar visualmente (color verde) qué métrica está seleccionada en la interfaz de selección (nuevos casos, nuevas muertes...).
 - **showTooltip**: haciendo uso de un raycaster, cuando se pulsa sobre uno de los histogramas representantes de los países, devuelve el valor exacto de casos/muertes que se está mostrando en ese momento.
 
+    ![Panel del tooltip](images/tooltip.png)
+
 ## Enlace al código
 
 Para acceder al repositorio de codesandbox haga uso del siguiente link: https://codesandbox.io/p/sandbox/visualizacion-de-datos-covid-19-entregable-final-4ymtxg
